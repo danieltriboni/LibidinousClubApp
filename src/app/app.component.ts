@@ -27,8 +27,14 @@ export class MyApp {
         // do something when a notification is opened
       });
 
-      this.oneSignal.endInit();
-      statusBar.styleDefault();
+      this.oneSignal.endInit();      
+
+      // let status bar overlay webview
+      statusBar.overlaysWebView(true);
+
+      // set status bar to white
+      statusBar.backgroundColorByHexString('#CC0000');
+
       splashScreen.hide();
     });
   }
